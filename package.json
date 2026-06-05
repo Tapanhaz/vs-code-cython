@@ -142,7 +142,7 @@
   },
   "devDependencies": {
     "js-yaml": "^4.2.0",
-    "lerna": "^9.0.7",
+    "lerna": "^8.2.4",
     "shx": "^0.4.0",
     "syntaxdev": "^0.1.3"
   }
