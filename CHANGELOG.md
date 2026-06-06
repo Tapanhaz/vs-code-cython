@@ -1,5 +1,12 @@
 # Change Log
 
+
+## [1.0.4]
+
+- Bump dependencies versions
+- Update submodule url to https://github.com/Tapanhaz/cyright.git
+- Fix: handle C++ enum name aliases and prevent infinite loop (cyright)
+
 ## [1.0.3]
 
 - Fix background typestub task error
