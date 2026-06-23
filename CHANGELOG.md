@@ -10,6 +10,7 @@
 - Fix consumption of C++ name aliases (cyright)
 - Fix parser failure on nested parentheses in function parameter declarations (cyright)
 - Add support for `cdef enum class` with scoped C++ enums (cyright)
+- Route var modifiers before struct/enum/cppclass to correct parser
 
 ## [1.0.4]
 
