@@ -1,5 +1,15 @@
 # Change Log
 
+## [1.0.5]
+
+- Update CI to Node.js 22
+- Modernize GitHub Actions (checkout, setup-node, artifacts)
+- Disable VS Code Marketplace publishing
+
+- Add support for `cdef api` declaration modifier (cyright)
+- Fix consumption of C++ name aliases (cyright)
+- Fix parser failure on nested parentheses in function parameter declarations (cyright)
+- Add support for `cdef enum class` with scoped C++ enums (cyright)
 
 ## [1.0.4]
 

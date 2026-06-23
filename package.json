@@ -2,12 +2,12 @@
   "name": "vscode-cython",
   "displayName": "Cython VSCode",
   "description": "Cython syntax checker + highlighter, Go to Definitions, type analysis, and more.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publisher": "ktnrg45",
   "icon": "icon.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ktnrg45/vs-code-cython.git"
+    "url": "https://github.com/Tapanhaz/vs-code-cython" 
   },
   "engines": {
     "vscode": "^1.70.0"
