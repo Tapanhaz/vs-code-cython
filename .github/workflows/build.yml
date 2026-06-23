@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           submodules: true
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 17
+          node-version: 22
           cache: "npm"
 
       - name: Install Dependencies
@@ -34,7 +34,7 @@ jobs:
 
       - name: Upload Artifact
         if: github.event_name == 'release'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v5
         with:
           name: dist
           path: vscode-cython.vsix
@@ -50,10 +50,10 @@ jobs:
       GH_TOKEN: ${{secrets.GITHUB_TOKEN}}
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Download Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v5
         with:
           name: dist
           path: dist/
@@ -62,18 +62,18 @@ jobs:
         run: gh release upload ${{ github.ref_name }} dist/vscode-cython.vsix -R ${{ github.repository }} --clobber
 
       - name: Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 17
+          node-version: 22
           cache: "npm"
 
       - name: Install VSCE
         run: npm install -g vsce
 
-      - name: Publish Release
-        if: github.event.release.prerelease == false
-        run: vsce publish -i dist/vscode-cython.vsix -p ${{ secrets.TOKEN }}
-
-      - name: Publish Pre-Release
-        if: github.event.release.prerelease == true
-        run: vsce publish -i dist/vscode-cython.vsix -p ${{ secrets.TOKEN }} --pre-release
+#      - name: Publish Release
+#        if: github.event.release.prerelease == false
+#        run: vsce publish -i dist/vscode-cython.vsix -p ${{ secrets.TOKEN }}
+#
+#      - name: Publish Pre-Release
+#        if: github.event.release.prerelease == true
+#        run: vsce publish -i dist/vscode-cython.vsix -p ${{ secrets.TOKEN }} --pre-release
