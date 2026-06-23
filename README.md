@@ -1,5 +1,8 @@
 # vscode-cython
 
+> ⚠️ Note: This is a maintenance fork of **[vs-code-cython](https://github.com/ktnrg45/vs-code-cython)**.  
+> The original repository is archived. All credit goes to the original author.
+
 [Main Repository](https://github.com/ktnrg45/vs-code-cython)
 
 [Cyright LSP Repository](https://github.com/ktnrg45/cyright)
